@@ -1,0 +1,13 @@
+@DynamicUpdate
+public class Books
+{
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    ,generator = "seq_gen")
+//    @SequenceGenerator(name="seq_gen",initialValue = 1,allocationSize = 1,sequenceName = "id_next_val")
+    private int bookid;
+    @Column
+    private String bookname;
+    @Column
+    private String author;
