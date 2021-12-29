@@ -1,0 +1,18 @@
+public class Books
+{
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.Table,generator = "seq_gen")
+    @SequenceGenerator(name="seq_gen",initialValue = 1,allocationSize = 1,sequenceName = "id_next_val")
+    private int bookid;
+    @Column
+    private String bookname;
+    @Column
+    private String author;
+    @Column
+    private int price;
+    public int getBookid()
+    {
+        return bookid;
+    }
+    public void setB
