@@ -1,0 +1,27 @@
+@Getter
+public class Books
+{
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "seq_gen")
+    @SequenceGenerator(name="seq_gen",initialValue = 1,allocationSize = 1,sequenceName = "id_next_val")
+    private int bookid;
+    @Column
+    private String bookname;
+    @Column
+    private String author;
+    @Column
+    private int price;
+    @Embedded
+    private Pages pages;
+    
+    
+    //////////////////////////////////////////
+    
+    @Embeddable
+@Data
+class Pages{
+    private Integer page;
+    private Integer quality;
+    private Integer demo;
+}
