@@ -1,0 +1,21 @@
+    @OneToOne
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
+    private Pages pages;
+    
+    
+    //going to have two table for P and C.
+    //P going to keep a extra column as C_primaryID_Name as foreign key for C.
+    
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Pages> pages = new ArrayList<>();
+    
+    //not going to create extra column for key,, a seprate table going to create for key mapping like P_table_C_Table
+    //for getting rid of extra table create filed in child class also for kepping parent record also and add@ManyToOne
+    
+    
+    
+    @ManyToOne
+    //two extra column going to create for kepping key relationship
+    //use @MappedBy to get rid of one column
+    
+    
