@@ -1,0 +1,8 @@
+    @ElementCollection
+    @JoinTable(name = "Page_table",joinColumns = @JoinColumn(name = "page_id"))
+    //if we won't use joinTable then hibernate going to create default table for collection like parentTable_childTable name
+    private Collection<Pages> pages = new ArrayList<>();
+    
+    ////////////////////////////////////
+    
+    
