@@ -1,0 +1,16 @@
+@Embedded
+    @AttributeOverrides(value ={
+            @AttributeOverride(column = @Column(name = "ho_page"),name = "page"),
+            @AttributeOverride(column = @Column(name = "ho_quality"),name = "quality"),
+            @AttributeOverride(column = @Column(name = "ho_demo"),name = "demo")
+    })
+    private Pages ho_pages;
+    
+   //////////////////////////////////////////// 
+@Embeddable
+@Data
+class Pages{
+    private Integer page;
+    private Integer quality;
+    private Integer demo;
+}
