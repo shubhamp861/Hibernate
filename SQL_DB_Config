@@ -1,0 +1,14 @@
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.25</version>
+</dependency>
+
+spring.datasource.url=jdbc:mysql://sql6.freesqldatabase.com:3306/sql6462158
+spring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
+spring.datasource.username=sql6462158
+spring.datasource.password=2DNqa3j5J4
+spring.jpa.database-platform=org.hibernate.dialect.MySQL5Dialect
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.hibernate.format_sql=true
